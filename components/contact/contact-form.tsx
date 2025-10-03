@@ -19,10 +19,20 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Convert FormData to JSON
+    const object: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      object[key] = value.toString();
+    });
+
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(object),
       });
 
       const data = await response.json();
