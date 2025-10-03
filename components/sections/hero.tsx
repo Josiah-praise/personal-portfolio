@@ -105,7 +105,7 @@ export function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-2xl opacity-50 animate-pulse-slow -z-10" />
 
               {/* Image container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-black dark:border-white shadow-2xl">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-black dark:border-gray-400 shadow-2xl">
                 <Image
                   src="/images/avatar.svg"
                   alt="Josiah Praise - Full-Stack Developer"
