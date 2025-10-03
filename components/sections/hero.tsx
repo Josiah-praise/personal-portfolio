@@ -7,12 +7,8 @@ export function Hero() {
   return (
     <section
       aria-label="Hero"
-      className="relative flex items-center justify-center bg-background overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden"
     >
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5 animate-gradient" />
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-
       <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
