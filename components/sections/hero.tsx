@@ -100,9 +100,14 @@ export function Hero() {
 
           {/* Image */}
           <div className="order-1 lg:order-2 flex justify-center animate-fade-in-delay">
-            <div className="relative">
-              {/* Decorative elements */}
+            <div className="relative animate-float">
+              {/* Rotating gradient border */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-500 to-secondary rounded-full opacity-75 blur-sm animate-spin-slow" />
+
+              {/* Decorative glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-2xl opacity-50 animate-pulse-slow" />
+
+              {/* Image container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-2xl">
                 <Image
                   src="/images/avatar.svg"
