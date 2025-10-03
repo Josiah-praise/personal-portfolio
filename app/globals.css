@@ -223,3 +223,17 @@ html {
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
 }
+
+/* Conic gradient for rotating border */
+.bg-gradient-conic {
+  background: conic-gradient(
+    from 0deg,
+    #000000,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #f59e0b,
+    #10b981,
+    #000000
+  );
+}
