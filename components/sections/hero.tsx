@@ -1,49 +1,101 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Hero() {
   return (
     <section
       aria-label="Hero"
-      className="flex items-center justify-center bg-background py-16 md:py-24"
+      className="relative flex items-center justify-center bg-background overflow-hidden"
     >
-      <div className="container mx-auto px-4 py-16 sm:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5 animate-gradient" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+
+      <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-              Josiah Praise
+          <div className="order-2 lg:order-1 text-center lg:text-left space-y-6 animate-fade-in">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              Available for opportunities
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+              Hi, I&apos;m{' '}
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Josiah Praise
+              </span>
             </h1>
-            <h2 className="text-xl sm:text-2xl text-muted-foreground mb-6">
-              Full-Stack Developer | React & TypeScript Specialist
+            <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
+              Full-Stack Developer
             </h2>
-            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
-              I build modern web applications with a focus on performance,
-              accessibility, and exceptional user experiences. Passionate about
-              creating elegant solutions to complex problems.
+            <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              I craft modern web applications with a focus on{' '}
+              <span className="text-foreground font-semibold">performance</span>,{' '}
+              <span className="text-foreground font-semibold">accessibility</span>, and{' '}
+              <span className="text-foreground font-semibold">user experience</span>.
+              Passionate about turning complex problems into elegant solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button asChild size="lg">
-                <Link href="/projects">View Projects</Link>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+                <Link href="/projects">
+                  View My Work
+                </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/contact">Get in Touch</Link>
+              <Button asChild variant="outline" size="lg" className="border-2">
+                <Link href="/contact">
+                  Get in Touch
+                </Link>
               </Button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-4 justify-center lg:justify-start pt-6">
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:your.email@example.com"
+                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
           {/* Image */}
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-              <Image
-                src="/images/avatar.svg"
-                alt="Josiah Praise - Full-Stack Developer"
-                width={400}
-                height={400}
-                priority
-                className="rounded-full object-cover shadow-2xl"
-              />
+          <div className="order-1 lg:order-2 flex justify-center animate-fade-in-delay">
+            <div className="relative">
+              {/* Decorative elements */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-2xl opacity-50 animate-pulse-slow" />
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-2xl">
+                <Image
+                  src="/images/avatar.svg"
+                  alt="Josiah Praise - Full-Stack Developer"
+                  width={400}
+                  height={400}
+                  priority
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>
