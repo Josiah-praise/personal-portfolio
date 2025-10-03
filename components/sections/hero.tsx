@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { ParticlesBackground } from '@/components/effects/particles-background';
 
 export function Hero() {
   return (
@@ -9,6 +10,7 @@ export function Hero() {
       aria-label="Hero"
       className="relative flex items-center justify-center overflow-hidden"
     >
+      <ParticlesBackground />
       <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
