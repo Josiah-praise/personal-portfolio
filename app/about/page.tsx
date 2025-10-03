@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
 
 export const metadata = {
   title: 'About | Josiah Praise',
@@ -16,10 +18,21 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               About Me
             </h1>
-            <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
               Hi, I&apos;m Josiah Praise, a passionate full-stack developer dedicated to building
               elegant, efficient, and user-centered digital experiences.
             </p>
+            <Button asChild size="lg">
+              <a
+                href="/resume/Josiah_Praise_Resume.pdf"
+                download="Josiah_Praise_Resume.pdf"
+                aria-label="Download resume as PDF"
+                className="inline-flex"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
+            </Button>
           </div>
           <div className="flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden">
@@ -159,11 +172,22 @@ export default function AboutPage() {
             understanding—ensuring that every solution not only works well but also delivers
             measurable value.
           </p>
-          <p className="mt-6">
-            <span className="text-foreground font-medium">Interested in my full experience? </span>
-            Download my resume for detailed information on my projects, technologies, and career history.
-            {/* Resume download link will be added in Story 2.2 */}
-          </p>
+          <div className="mt-8">
+            <p className="text-foreground font-medium mb-4">
+              Interested in my full experience?
+            </p>
+            <Button asChild size="lg" variant="outline">
+              <a
+                href="/resume/Josiah_Praise_Resume.pdf"
+                download="Josiah_Praise_Resume.pdf"
+                aria-label="Download resume as PDF"
+                className="inline-flex"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Full Resume
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </article>
