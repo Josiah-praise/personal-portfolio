@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'Josiah Praise | Full-Stack Developer',
   description:
     'Full-Stack Developer specializing in React, TypeScript, and modern web technologies.',
+  icons: {
+    icon: '/terminal.png',
+  },
 };
 
 export default function RootLayout({

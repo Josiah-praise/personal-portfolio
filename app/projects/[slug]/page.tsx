@@ -44,7 +44,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     const project = await getProjectBySlug(slug);
 
     return (
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 animate-fade-in">
         <Button asChild variant="ghost" className="mb-8">
           <Link href="/projects">
             <ArrowLeft className="mr-2 h-4 w-4" />
