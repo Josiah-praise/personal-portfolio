@@ -62,7 +62,7 @@ export default function AboutPage() {
             work and self-driven learning, I built the foundation for the experience I have today.
           </p>
           <p>
-            Over the years, I&apos;ve immersed myself in computer science fundamentals—mastering
+            Over the years, I&apos;ve immersed myself in computer science fundamentals: mastering
             data structures and algorithms, understanding space-time complexity, and diving deep
             into languages like C, Python, JavaScript, and TypeScript. I&apos;ve explored servers,
             Linux/Unix systems, and countless other technologies. Some remain core to my daily work,
@@ -71,8 +71,8 @@ export default function AboutPage() {
           <p>
             What drives me as a software engineer is the ability to bring ideas and solutions from
             concept to reality. My development philosophy is simple yet powerful: given time and
-            resources, I can solve any problem I&apos;m faced with. This mindset extends beyond
-            code—it&apos;s a principle I apply to all facets of life. Whether it&apos;s building
+            resources, I can solve any problem I&apos;m faced with. This mindset extends beyond code.
+            It&apos;s a principle I apply to all facets of life. Whether it&apos;s building
             scalable systems, debugging complex issues, or architecting blockchain solutions,
             I&apos;m committed to finding the path forward.
           </p>
@@ -215,13 +215,13 @@ export default function AboutPage() {
           <p>
             With 3+ years of experience, I&apos;ve worked across diverse industries including
             fintech, AI, and whistleblowing platforms, delivering full-stack and blockchain
-            solutions. My expertise spans the entire development lifecycle—from initial concept and
+            solutions. My expertise spans the entire development lifecycle, from initial concept and
             architecture to deployment and maintenance.
           </p>
           <p>
             My professional journey includes working at a fintech startup, where I built scalable
             backend systems; an AI startup, where I identified and resolved critical security flaws
-            before production launch—preventing what could have been catastrophic vulnerabilities;
+            before production launch (preventing what could have been catastrophic vulnerabilities);
             and a whistleblowing platform, alongside various freelance projects. These experiences
             have honed my ability to adapt quickly to different tech stacks and business
             requirements.
@@ -229,7 +229,7 @@ export default function AboutPage() {
           <p>
             I specialize in modern web technologies and blockchain development, with a focus on
             TypeScript, React, Next.js, Node.js, Solidity, and decentralized systems. My approach
-            combines technical excellence with business understanding—ensuring that every solution
+            combines technical excellence with business understanding, ensuring that every solution
             not only works well but also delivers measurable value and security.
           </p>
           <div className="mt-8">
