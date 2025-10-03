@@ -57,23 +57,24 @@ export default function AboutPage() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">My Journey</h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            My journey into software development began with curiosity—a desire to understand how
-            things work and a fascination with solving complex problems. What started as tinkering
-            with code evolved into a passionate career dedicated to crafting meaningful digital
-            solutions.
+            In 2022, I made a pivotal decision to leave university and fully commit to software
+            development as my career. Through two intensive bootcamps, coupled with relentless hard
+            work and dedication, I built the foundation for the experience I have today.
           </p>
           <p>
-            Over the years, I&apos;ve had the privilege of working on diverse projects, from
-            building robust backend systems to designing intuitive user interfaces. Each project has
-            taught me the importance of clean code, thoughtful architecture, and the human element
-            in technology.
+            Over the years, I&apos;ve immersed myself in computer science fundamentals—mastering
+            data structures and algorithms, understanding space-time complexity, and diving deep
+            into languages like C, Python, JavaScript, and TypeScript. I&apos;ve explored servers,
+            Linux/Unix systems, and countless other technologies. Some remain core to my daily work,
+            while others have shaped my problem-solving approach in ways I still draw upon.
           </p>
           <p>
-            What drives me most is the intersection of creativity and logic—turning ideas into
-            reality through code. I&apos;m motivated by challenges that push me to learn, grow, and
-            deliver solutions that make a real difference. Whether it&apos;s optimizing performance,
-            improving user experience, or collaborating with teams, I&apos;m committed to excellence
-            in everything I build.
+            What drives me as a software engineer is the ability to bring ideas and solutions from
+            concept to reality. My development philosophy is simple yet powerful: given time and
+            resources, I can solve any problem I&apos;m faced with. This mindset extends beyond
+            code—it&apos;s a principle I apply to all facets of life. Whether it&apos;s building
+            scalable systems, debugging complex issues, or architecting blockchain solutions,
+            I&apos;m committed to finding the path forward.
           </p>
         </div>
       </section>
@@ -134,8 +135,18 @@ export default function AboutPage() {
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">
+                      Blockchain & Smart Contract Development
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">
                       TypeScript & React/Next.js Expertise
                     </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Backend Architecture & Systems Design</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
@@ -149,13 +160,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">Cloud Infrastructure & DevOps</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">
-                      UI/UX Design & Responsive Development
-                    </span>
+                    <span className="text-muted-foreground">Security Analysis & Code Review</span>
                   </li>
                 </ul>
               </CardContent>
@@ -176,15 +181,19 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">Creative Problem Solving</span>
+                    <span className="text-muted-foreground">Resourceful Problem Solving</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">Effective Team Collaboration</span>
+                    <span className="text-muted-foreground">Self-Driven & Dedicated Work Ethic</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">Rapid Learning & Adaptability</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Detail-Oriented Code Review</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
@@ -204,23 +213,24 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            With several years of experience in full-stack development, I&apos;ve successfully
-            delivered projects across diverse industries including fintech, e-commerce, and
-            enterprise SaaS. My expertise spans the entire development lifecycle—from initial
-            concept and architecture to deployment and maintenance.
+            With 3+ years of experience, I&apos;ve worked across diverse industries including
+            fintech, AI, and whistleblowing platforms, delivering full-stack and blockchain
+            solutions. My expertise spans the entire development lifecycle—from initial concept and
+            architecture to deployment and maintenance.
           </p>
           <p>
-            Key achievements include architecting scalable microservices that handle millions of
-            requests, leading development teams through complex projects, and consistently
-            delivering solutions that exceed client expectations. I&apos;ve worked with both
-            startups and established companies, adapting quickly to different tech stacks and
-            business requirements.
+            My professional journey includes working at a fintech startup, where I built scalable
+            backend systems; an AI startup, where I identified and resolved critical security flaws
+            before production launch—preventing what could have been catastrophic vulnerabilities;
+            and a whistleblowing platform, alongside various freelance projects. These experiences
+            have honed my ability to adapt quickly to different tech stacks and business
+            requirements.
           </p>
           <p>
-            I specialize in modern web technologies with a focus on TypeScript, React, Next.js,
-            Node.js, and cloud platforms. My approach combines technical excellence with business
-            understanding—ensuring that every solution not only works well but also delivers
-            measurable value.
+            I specialize in modern web technologies and blockchain development, with a focus on
+            TypeScript, React, Next.js, Node.js, Solidity, and decentralized systems. My approach
+            combines technical excellence with business understanding—ensuring that every solution
+            not only works well but also delivers measurable value and security.
           </p>
           <div className="mt-8">
             <p className="text-foreground font-medium mb-4">Interested in my full experience?</p>

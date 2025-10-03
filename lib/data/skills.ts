@@ -11,7 +11,7 @@ export interface SkillCategory {
 export const skills: SkillCategory[] = [
   {
     name: "Languages",
-    skills: ["TypeScript", "JavaScript", "Python", "SQL", "HTML", "CSS"],
+    skills: ["TypeScript", "JavaScript", "Python", "Solidity", "C", "SQL", "HTML", "CSS"],
   },
   {
     name: "Frontend Development",
@@ -22,8 +22,12 @@ export const skills: SkillCategory[] = [
     skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"],
   },
   {
+    name: "Blockchain Development",
+    skills: ["Solidity", "Ethers.js", "Viem", "Wagmi", "Stacks", "StacksJS", "Subgraph", "Web3.js"],
+  },
+  {
     name: "Tools & Platforms",
-    skills: ["Git", "Docker", "VS Code", "Figma", "Vercel", "AWS", "Firebase"],
+    skills: ["Git", "Docker", "Linux/Unix", "VS Code", "Figma", "Vercel", "AWS", "Firebase"],
   },
   {
     name: "Practices & Methodologies",
@@ -35,7 +39,7 @@ export const topSkills: Skill[] = [
   { name: "React / Next.js", proficiency: 95 },
   { name: "TypeScript", proficiency: 90 },
   { name: "Node.js / Express", proficiency: 85 },
-  { name: "Tailwind CSS", proficiency: 92 },
+  { name: "Solidity / Smart Contracts", proficiency: 82 },
   { name: "PostgreSQL", proficiency: 80 },
   { name: "REST APIs", proficiency: 88 },
   { name: "Git / GitHub", proficiency: 90 },
