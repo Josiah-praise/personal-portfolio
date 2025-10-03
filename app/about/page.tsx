@@ -8,9 +8,9 @@ import { StatsSection } from '@/components/about/stats-section';
 import { SkillProgressBar } from '@/components/about/skill-progress-bar';
 
 export const metadata = {
-  title: 'About | Josiah Praise',
+  title: 'About | Praise Josiah',
   description:
-    'Learn about my journey as a full-stack developer, my core competencies, and professional background.',
+    'Learn about my journey as a full-stack and blockchain developer, my core competencies, and professional background.',
 };
 
 export default function AboutPage() {
@@ -22,13 +22,13 @@ export default function AboutPage() {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">About Me</h1>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
-              Hi, I&apos;m Josiah Praise, a passionate full-stack developer dedicated to building
-              elegant, efficient, and user-centered digital experiences.
+              Hi, I&apos;m Praise Josiah, a full-stack and blockchain developer dedicated to building
+              scalable systems and decentralized solutions that solve real-world problems.
             </p>
             <Button asChild size="lg">
               <a
-                href="/resume/Josiah_Praise_Resume.pdf"
-                download="Josiah_Praise_Resume.pdf"
+                href="/resume/Praise_Josiah_Resume.pdf"
+                download="Praise_Josiah_Resume.pdf"
                 aria-label="Download resume as PDF"
                 className="inline-flex"
               >
@@ -226,8 +226,8 @@ export default function AboutPage() {
             <p className="text-foreground font-medium mb-4">Interested in my full experience?</p>
             <Button asChild size="lg" variant="outline">
               <a
-                href="/resume/Josiah_Praise_Resume.pdf"
-                download="Josiah_Praise_Resume.pdf"
+                href="/resume/Praise_Josiah_Resume.pdf"
+                download="Praise_Josiah_Resume.pdf"
                 aria-label="Download resume as PDF"
                 className="inline-flex"
               >

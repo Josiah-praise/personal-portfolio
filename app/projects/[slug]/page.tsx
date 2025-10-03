@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
   try {
     const project = await getProjectBySlug(slug);
     return {
-      title: `${project.title} | Projects | Josiah Praise`,
+      title: `${project.title} | Projects | Praise Josiah`,
       description: project.description,
     };
   } catch {

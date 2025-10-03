@@ -5,7 +5,7 @@ import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
 import { SiDiscord } from 'react-icons/si';
 
 export const metadata = {
-  title: 'Contact | Josiah Praise',
+  title: 'Contact | Praise Josiah',
   description: 'Get in touch with me to discuss new projects, creative ideas, or opportunities to collaborate.',
 };
 

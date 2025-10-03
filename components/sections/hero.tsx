@@ -22,18 +22,18 @@ export function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
               Hi, I&apos;m{' '}
               <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Josiah Praise
+                Praise Josiah
               </span>
             </h1>
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
-              Full-Stack Developer
+              Full-Stack & Blockchain Developer
             </h2>
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-              I craft modern web applications with a focus on{' '}
-              <span className="text-foreground font-semibold">performance</span>,{' '}
-              <span className="text-foreground font-semibold">accessibility</span>, and{' '}
-              <span className="text-foreground font-semibold">user experience</span>.
-              Passionate about turning complex problems into elegant solutions.
+              I specialize in building{' '}
+              <span className="text-foreground font-semibold">scalable systems</span> and{' '}
+              <span className="text-foreground font-semibold">blockchain solutions</span>, with a focus on{' '}
+              <span className="text-foreground font-semibold">backend architecture</span> and systems design.
+              Passionate about creating robust, efficient applications that solve real-world problems.
             </p>
 
             {/* CTAs */}

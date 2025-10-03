@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Josiah Praise | Full-Stack Developer',
+  title: 'Praise Josiah | Full-Stack & Blockchain Developer',
   description:
-    'Full-Stack Developer specializing in React, TypeScript, and modern web technologies.',
+    'Full-Stack & Blockchain Developer specializing in scalable systems, backend architecture, and decentralized solutions.',
   icons: {
     icon: '/terminal.png',
   },

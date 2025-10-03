@@ -2,8 +2,8 @@ import { getAllProjects } from '@/lib/content/projects';
 import { ProjectCard } from '@/components/project/project-card';
 
 export const metadata = {
-  title: 'Projects | Josiah Praise',
-  description: 'Explore my portfolio of web development projects, including full-stack applications, APIs, and user interfaces.',
+  title: 'Projects | Praise Josiah',
+  description: 'Explore my portfolio of web development and blockchain projects, including full-stack applications, decentralized solutions, and scalable systems.',
 };
 
 export default async function ProjectsPage() {
@@ -17,7 +17,7 @@ export default async function ProjectsPage() {
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl">
           A collection of projects showcasing my expertise in full-stack development,
-          modern web technologies, and user-centered design.
+          blockchain solutions, and scalable system architecture.
         </p>
       </div>
 
