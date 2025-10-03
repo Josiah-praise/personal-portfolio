@@ -21,9 +21,11 @@ export default async function ProjectsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        {projects.map((project, index) => (
+          <div key={project.slug} className={`animate-stagger-${(index % 6) + 1}`}>
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
     </div>

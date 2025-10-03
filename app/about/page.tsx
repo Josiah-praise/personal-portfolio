@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
-import { skills } from '@/lib/data/skills';
+import { Download, Code, Database, Palette, Wrench } from 'lucide-react';
+import { skills, topSkills } from '@/lib/data/skills';
 import { SkillCategory } from '@/components/sections/skill-category';
+import { StatsSection } from '@/components/about/stats-section';
+import { SkillProgressBar } from '@/components/about/skill-progress-bar';
 
 export const metadata = {
   title: 'About | Josiah Praise',
@@ -79,74 +81,116 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <StatsSection />
+
+      {/* Top Skills with Progress Bars */}
+      <section className="mb-16">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
+          Top Skills
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            {topSkills.slice(0, 4).map((skill) => (
+              <SkillProgressBar
+                key={skill.name}
+                skill={skill.name}
+                proficiency={skill.proficiency}
+              />
+            ))}
+          </div>
+          <div>
+            {topSkills.slice(4).map((skill) => (
+              <SkillProgressBar
+                key={skill.name}
+                skill={skill.name}
+                proficiency={skill.proficiency}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Core Competencies */}
       <section className="mb-16">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
           Core Competencies
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 md:items-stretch">
           {/* Technical Skills */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl">Technical Skills</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Full-Stack Development with modern frameworks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">TypeScript & React/Next.js Expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">RESTful & GraphQL API Design</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Database Architecture & Optimization</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Cloud Infrastructure & DevOps</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">UI/UX Design & Responsive Development</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="relative group h-full">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
+            <Card className="relative h-full">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <Code className="w-5 h-5 text-primary" />
+                  <CardTitle className="text-xl">Technical Skills</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Full-Stack Development with modern frameworks</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">TypeScript & React/Next.js Expertise</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">RESTful & GraphQL API Design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Database Architecture & Optimization</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Cloud Infrastructure & DevOps</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">UI/UX Design & Responsive Development</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Soft Skills */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-xl">Professional Qualities</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Creative Problem Solving</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Effective Team Collaboration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Rapid Learning & Adaptability</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">▸</span>
-                  <span className="text-muted-foreground">Clear Technical Communication</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="relative group h-full">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
+            <Card className="relative h-full">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <Palette className="w-5 h-5 text-primary" />
+                  <CardTitle className="text-xl">Professional Qualities</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Creative Problem Solving</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Effective Team Collaboration</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Rapid Learning & Adaptability</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">▸</span>
+                    <span className="text-muted-foreground">Clear Technical Communication</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
