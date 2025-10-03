@@ -5,12 +5,12 @@ import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">JP</span>
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <div className="container mx-auto flex h-14 items-center justify-between px-6">
+        <Link href="/" className="flex items-center">
+          <span className="text-lg font-bold tracking-tight hover:text-primary transition-colors">JP</span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <Nav />
           <ThemeToggle />
           <MobileMenu />

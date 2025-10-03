@@ -22,7 +22,7 @@ export function Nav() {
   };
 
   return (
-    <nav className="hidden md:flex items-center gap-2">
+    <nav className="hidden md:flex items-center gap-1">
       {navLinks.map((link) => {
         const active = isActive(link.href);
         return (
@@ -30,15 +30,15 @@ export function Nav() {
             key={link.href}
             href={link.href}
             className={cn(
-              'relative px-4 py-2 text-sm font-medium transition-all rounded-lg hover:bg-secondary/80',
+              'relative px-3 py-1.5 text-sm font-medium transition-colors',
               active
-                ? 'text-primary'
+                ? 'text-foreground'
                 : 'text-muted-foreground hover:text-foreground'
             )}
           >
             {link.label}
             {active && (
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-primary rounded-full" />
+              <span className="absolute bottom-0 left-0 right-0 h-px bg-foreground" />
             )}
           </Link>
         );
