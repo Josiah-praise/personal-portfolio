@@ -1,0 +1,96 @@
+---
+title: "Task Management Platform"
+slug: "sample-project"
+description: "A collaborative task management platform with real-time updates and team productivity analytics"
+featured: true
+order: 1
+category: "Full-Stack"
+technologies:
+  - "Next.js"
+  - "TypeScript"
+  - "PostgreSQL"
+  - "Prisma"
+  - "Tailwind CSS"
+  - "WebSocket"
+startDate: "2024-01"
+endDate: "2024-06"
+demoUrl: "https://example.com/demo"
+githubUrl: "https://github.com/example/task-manager"
+thumbnail: "/images/projects/sample-project/thumbnail.webp"
+images:
+  - "/images/projects/sample-project/screenshot-1.webp"
+  - "/images/projects/sample-project/screenshot-2.webp"
+  - "/images/projects/sample-project/screenshot-3.webp"
+---
+
+## Problem
+
+Modern teams struggle with coordinating tasks across distributed team members. Existing task management tools often lack real-time collaboration features, have poor user experiences, or don&apos;t provide actionable insights into team productivity.
+
+Specifically, teams faced:
+- Delayed updates causing duplicate work
+- No visibility into project progress
+- Clunky interfaces that slow down task creation
+- Limited analytics to identify bottlenecks
+
+## Solution
+
+I built a modern task management platform focused on real-time collaboration and team insights. The architecture uses Next.js for the frontend with server-side rendering for optimal performance, PostgreSQL with Prisma for type-safe database access, and WebSocket connections for real-time updates.
+
+Key architectural decisions:
+- **Server-side rendering**: Fast initial page loads and SEO benefits
+- **Optimistic UI updates**: Immediate feedback with background sync
+- **WebSocket protocol**: Real-time task updates without polling
+- **Modular component design**: Reusable UI components with shadcn/ui
+
+## Key Features
+
+- **Real-time Collaboration**: See task updates instantly as team members make changes, with conflict resolution
+- **Drag-and-drop Interface**: Intuitive kanban-style boards with smooth animations and keyboard shortcuts
+- **Team Analytics Dashboard**: Visualize productivity metrics, completion rates, and identify bottlenecks
+- **Smart Notifications**: Context-aware notifications that don&apos;t overwhelm users
+- **Advanced Filtering**: Powerful search and filter capabilities to find tasks quickly
+- **Mobile-responsive Design**: Full functionality on mobile devices with touch gestures
+
+## Technologies Used
+
+**Frontend:**
+- **Next.js 14**: Chosen for App Router, server components, and excellent developer experience
+- **TypeScript**: Full type safety across the codebase to prevent runtime errors
+- **Tailwind CSS**: Utility-first styling for rapid UI development with consistent design
+- **shadcn/ui**: High-quality accessible components as a foundation
+
+**Backend:**
+- **Next.js API Routes**: Simplified deployment with co-located frontend and backend
+- **PostgreSQL**: Robust relational database for complex queries and data integrity
+- **Prisma ORM**: Type-safe database access with excellent TypeScript integration
+- **WebSocket (Socket.io)**: Real-time bidirectional communication for live updates
+
+**Infrastructure:**
+- **Vercel**: Edge network deployment for global performance
+- **Vercel Postgres**: Managed database with automatic backups
+- **GitHub Actions**: CI/CD pipeline for automated testing and deployment
+
+## Results
+
+**Performance:**
+- Page load time under 1.2 seconds globally
+- Real-time updates with less than 100ms latency
+- 99.8% uptime over 6 months
+
+**Adoption:**
+- Onboarded 15 teams with 200+ active users
+- Average session duration increased 40% compared to previous tool
+- 95% user satisfaction rating
+
+**Key Learnings:**
+- Optimistic UI updates significantly improve perceived performance
+- Real-time features must gracefully handle offline scenarios
+- User onboarding is critical for adoption of new productivity tools
+- Type safety with TypeScript prevented numerous potential production bugs
+
+**Technical Achievements:**
+- Implemented efficient WebSocket connection pooling
+- Optimized database queries reducing response time by 60%
+- Built comprehensive test suite with 85% code coverage
+- Established CI/CD pipeline reducing deployment time from hours to minutes
