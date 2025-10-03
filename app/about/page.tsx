@@ -44,9 +44,10 @@ export default function AboutPage() {
                 alt="Josiah Praise - Full Stack Developer"
                 width={256}
                 height={256}
-                className="object-cover object-top"
+                className="object-cover object-top grayscale"
                 priority
               />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30 pointer-events-none" />
             </div>
           </div>
         </div>

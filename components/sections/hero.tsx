@@ -112,8 +112,9 @@ export function Hero() {
                   width={400}
                   height={400}
                   priority
-                  className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top hover:scale-105 transition-transform duration-500 grayscale"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30 pointer-events-none" />
               </div>
             </div>
           </div>
