@@ -1,30 +1,28 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 export function ParticlesBackground() {
   const [init, setInit] = useState(false);
+  const { theme, systemTheme } = useTheme();
+
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const isDark = currentTheme === 'dark';
 
   useEffect(() => {
-    console.log('Starting particles initialization...'); // Debug log
     initParticlesEngine(async (engine) => {
-      console.log('Loading particles engine...'); // Debug log
       await loadSlim(engine);
-      console.log('Particles engine loaded!'); // Debug log
     }).then(() => {
-      console.log('Particles ready!'); // Debug log
       setInit(true);
     });
   }, []);
 
   if (!init) {
-    console.log('Particles not initialized yet'); // Debug log
     return null;
   }
-
-  console.log('Rendering particles...'); // Debug log
 
   return (
     <Particles
@@ -66,13 +64,13 @@ export function ParticlesBackground() {
           },
           particles: {
             color: {
-              value: '#333333',
+              value: isDark ? '#ffffff' : '#333333',
             },
             links: {
-              color: '#666666',
+              color: isDark ? '#ffffff' : '#666666',
               distance: 150,
               enable: true,
-              opacity: 0.3,
+              opacity: isDark ? 0.2 : 0.3,
               width: 1,
             },
             move: {
@@ -92,7 +90,7 @@ export function ParticlesBackground() {
               value: 200,
             },
             opacity: {
-              value: 0.5,
+              value: isDark ? 0.4 : 0.5,
             },
             shape: {
               type: 'circle',

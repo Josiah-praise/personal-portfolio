@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Nav } from './nav';
 import { MobileMenu } from './mobile-menu';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export function Header() {
   return (
@@ -11,6 +12,7 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-4">
           <Nav />
+          <ThemeToggle />
           <MobileMenu />
         </div>
       </div>
