@@ -8,10 +8,10 @@ export function Hero() {
   return (
     <section
       aria-label="Hero"
-      className="relative flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden min-h-screen"
     >
       <ParticlesBackground />
-      <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40">
+      <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left space-y-6 animate-fade-in">
