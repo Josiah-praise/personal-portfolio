@@ -23,7 +23,7 @@ export const skills: SkillCategory[] = [
   },
   {
     name: "Blockchain Development",
-    skills: ["Solidity", "Ethers.js", "Viem", "Wagmi", "Stacks", "StacksJS", "Subgraph", "Web3.js"],
+    skills: ["Solidity", "Ethers.js", "Viem", "Wagmi", "Hardhat", "Foundry", "Stacks", "StacksJS", "Subgraph", "Web3.js"],
   },
   {
     name: "Tools & Platforms",
