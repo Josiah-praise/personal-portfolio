@@ -10,7 +10,7 @@ export default async function ProjectsPage() {
   const projects = await getAllProjects();
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 animate-fade-in">
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
           My Projects

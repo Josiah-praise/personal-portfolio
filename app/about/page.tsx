@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <article className="container mx-auto px-4 py-12">
+    <article className="container mx-auto px-4 py-12 animate-fade-in">
       {/* Hero Section with Image */}
       <section className="mb-16">
         <div className="grid gap-8 md:grid-cols-2 items-center">
