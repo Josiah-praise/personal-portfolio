@@ -58,8 +58,8 @@ export default function AboutPage() {
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
             In 2022, I made a pivotal decision to leave university and fully commit to software
-            development as my career. Through two intensive bootcamps, coupled with relentless hard
-            work and dedication, I built the foundation for the experience I have today.
+            development as my career. Through an intensive bootcamp, coupled with relentless hard
+            work and self-driven learning, I built the foundation for the experience I have today.
           </p>
           <p>
             Over the years, I&apos;ve immersed myself in computer science fundamentals—mastering
