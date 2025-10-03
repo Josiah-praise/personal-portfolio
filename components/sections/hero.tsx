@@ -101,20 +101,11 @@ export function Hero() {
           {/* Image */}
           <div className="order-1 lg:order-2 flex justify-center animate-fade-in-delay">
             <div className="relative animate-float">
-              {/* Rotating gradient border */}
-              <div className="absolute -inset-1 rounded-full animate-spin-slow z-0">
-                <div className="w-full h-full rounded-full bg-gradient-conic" style={{
-                  background: 'conic-gradient(from 0deg, #000000, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #10b981, #000000)',
-                  filter: 'blur(4px)',
-                  opacity: 0.8
-                }} />
-              </div>
-
               {/* Decorative glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-2xl opacity-50 animate-pulse-slow -z-10" />
 
               {/* Image container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-black shadow-2xl z-10">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-black shadow-2xl">
                 <Image
                   src="/images/avatar.svg"
                   alt="Josiah Praise - Full-Stack Developer"
