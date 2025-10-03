@@ -1,4 +1,4 @@
-import { projects } from '@/lib/data/projects-data';
+import { getAllProjects } from '@/lib/content/projects';
 import { ProjectCard } from '@/components/project/project-card';
 
 export const metadata = {
@@ -6,7 +6,9 @@ export const metadata = {
   description: 'Explore my portfolio of web development projects, including full-stack applications, APIs, and user interfaces.',
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getAllProjects();
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12">
