@@ -40,11 +40,11 @@ export default function AboutPage() {
           <div className="flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden bg-muted">
               <Image
-                src="/images/avatar.svg"
+                src="/images/profile.jpg"
                 alt="Josiah Praise - Full Stack Developer"
                 width={256}
                 height={256}
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>

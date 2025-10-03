@@ -107,12 +107,12 @@ export function Hero() {
               {/* Image container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-black dark:border-gray-400 shadow-2xl">
                 <Image
-                  src="/images/avatar.svg"
+                  src="/images/profile.jpg"
                   alt="Josiah Praise - Full-Stack Developer"
                   width={400}
                   height={400}
                   priority
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
