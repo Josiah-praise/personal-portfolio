@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { SiDiscord } from 'react-icons/si';
 import { ParticlesBackground } from '@/components/effects/particles-background';
 
 export function Hero() {
@@ -52,7 +53,7 @@ export function Hero() {
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start pt-6">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/josiah-praise"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
@@ -61,7 +62,7 @@ export function Hero() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/praisejosiah"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
@@ -70,7 +71,25 @@ export function Hero() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="https://x.com/Praise_JC_AFK"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://discord.com/users/1103617696190435380"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                aria-label="Discord"
+              >
+                <SiDiscord className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:praisechinonso21@gmail.com"
                 className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
                 aria-label="Email"
               >

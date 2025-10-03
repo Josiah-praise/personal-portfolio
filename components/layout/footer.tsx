@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { SiDiscord } from 'react-icons/si';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link
-              href="https://github.com/Josiah-praise"
+              href="https://github.com/josiah-praise"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -22,7 +23,7 @@ export function Footer() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/josiah-praise"
+              href="https://www.linkedin.com/in/praisejosiah"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -31,7 +32,7 @@ export function Footer() {
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link
-              href="https://x.com/josiahpraise"
+              href="https://x.com/Praise_JC_AFK"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -40,7 +41,16 @@ export function Footer() {
               <span className="sr-only">X (Twitter)</span>
             </Link>
             <Link
-              href="mailto:josiah@example.com"
+              href="https://discord.com/users/1103617696190435380"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <SiDiscord className="h-5 w-5" />
+              <span className="sr-only">Discord</span>
+            </Link>
+            <Link
+              href="mailto:praisechinonso21@gmail.com"
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
               <Mail className="h-5 w-5" />

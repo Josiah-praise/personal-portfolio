@@ -1,18 +1,18 @@
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: string; // Lucide icon name
+  icon: string; // Lucide icon name or react-icons
 }
 
 export const socialLinks: SocialLink[] = [
   {
     platform: "Email",
-    url: "mailto:josiah.praise@example.com",
+    url: "mailto:praisechinonso21@gmail.com",
     icon: "Mail",
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/josiahpraise",
+    url: "https://www.linkedin.com/in/praisejosiah",
     icon: "Linkedin",
   },
   {
@@ -22,7 +22,12 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "Twitter",
-    url: "https://twitter.com/josiahpraise",
+    url: "https://x.com/Praise_JC_AFK",
     icon: "Twitter",
+  },
+  {
+    platform: "Discord",
+    url: "https://discord.com/users/1103617696190435380",
+    icon: "Discord",
   },
 ];

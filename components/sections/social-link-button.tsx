@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { SiDiscord } from 'react-icons/si';
 import type { SocialLink } from '@/lib/data/social-links';
 
 interface SocialLinkButtonProps {
@@ -11,6 +12,7 @@ const iconMap = {
   Linkedin,
   Github,
   Twitter,
+  Discord: SiDiscord,
 };
 
 export function SocialLinkButton({ link }: SocialLinkButtonProps) {
