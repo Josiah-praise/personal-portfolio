@@ -43,7 +43,7 @@ export function SkillProgressBar({ skill, proficiency }: SkillProgressBarProps) 
       </div>
       <div className="h-2 bg-secondary rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-primary to-purple-600 transition-all duration-1000 ease-out rounded-full"
+          className="h-full bg-primary transition-all duration-1000 ease-out rounded-full"
           style={{ width: `${width}%` }}
         />
       </div>

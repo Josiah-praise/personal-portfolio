@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Download, Code, Database, Palette, Wrench } from 'lucide-react';
+import { Download, Code, Palette } from 'lucide-react';
 import { skills, topSkills } from '@/lib/data/skills';
 import { SkillCategory } from '@/components/sections/skill-category';
 import { StatsSection } from '@/components/about/stats-section';
@@ -9,7 +9,8 @@ import { SkillProgressBar } from '@/components/about/skill-progress-bar';
 
 export const metadata = {
   title: 'About | Josiah Praise',
-  description: 'Learn about my journey as a full-stack developer, my core competencies, and professional background.',
+  description:
+    'Learn about my journey as a full-stack developer, my core competencies, and professional background.',
 };
 
 export default function AboutPage() {
@@ -19,9 +20,7 @@ export default function AboutPage() {
       <section className="mb-16">
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              About Me
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">About Me</h1>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
               Hi, I&apos;m Josiah Praise, a passionate full-stack developer dedicated to building
               elegant, efficient, and user-centered digital experiences.
@@ -55,21 +54,19 @@ export default function AboutPage() {
 
       {/* Developer Background Story */}
       <section className="mb-16">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
-          My Journey
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">My Journey</h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            My journey into software development began with curiosity—a desire to understand
-            how things work and a fascination with solving complex problems. What started as
-            tinkering with code evolved into a passionate career dedicated to crafting
-            meaningful digital solutions.
+            My journey into software development began with curiosity—a desire to understand how
+            things work and a fascination with solving complex problems. What started as tinkering
+            with code evolved into a passionate career dedicated to crafting meaningful digital
+            solutions.
           </p>
           <p>
-            Over the years, I&apos;ve had the privilege of working on diverse projects, from building
-            robust backend systems to designing intuitive user interfaces. Each project has taught
-            me the importance of clean code, thoughtful architecture, and the human element in
-            technology.
+            Over the years, I&apos;ve had the privilege of working on diverse projects, from
+            building robust backend systems to designing intuitive user interfaces. Each project has
+            taught me the importance of clean code, thoughtful architecture, and the human element
+            in technology.
           </p>
           <p>
             What drives me most is the intersection of creativity and logic—turning ideas into
@@ -86,9 +83,7 @@ export default function AboutPage() {
 
       {/* Top Skills with Progress Bars */}
       <section className="mb-16">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
-          Top Skills
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">Top Skills</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             {topSkills.slice(0, 4).map((skill) => (
@@ -120,8 +115,8 @@ export default function AboutPage() {
         <div className="grid gap-6 md:grid-cols-2 md:items-stretch">
           {/* Technical Skills */}
           <div className="relative group h-full">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
-            <Card className="relative h-full">
+            <div className="absolute inset-0 rounded-lg border border-primary/15 bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+            <Card className="relative h-full transition-all duration-300 group-hover:shadow-md">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Code className="w-5 h-5 text-primary" />
@@ -132,11 +127,15 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">Full-Stack Development with modern frameworks</span>
+                    <span className="text-muted-foreground">
+                      Full-Stack Development with modern frameworks
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">TypeScript & React/Next.js Expertise</span>
+                    <span className="text-muted-foreground">
+                      TypeScript & React/Next.js Expertise
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
@@ -144,7 +143,9 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">Database Architecture & Optimization</span>
+                    <span className="text-muted-foreground">
+                      Database Architecture & Optimization
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
@@ -152,7 +153,9 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
-                    <span className="text-muted-foreground">UI/UX Design & Responsive Development</span>
+                    <span className="text-muted-foreground">
+                      UI/UX Design & Responsive Development
+                    </span>
                   </li>
                 </ul>
               </CardContent>
@@ -161,8 +164,8 @@ export default function AboutPage() {
 
           {/* Soft Skills */}
           <div className="relative group h-full">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
-            <Card className="relative h-full">
+            <div className="absolute inset-0 rounded-lg border border-primary/15 bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+            <Card className="relative h-full transition-all duration-300 group-hover:shadow-md">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Palette className="w-5 h-5 text-primary" />
@@ -201,16 +204,17 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            With several years of experience in full-stack development, I&apos;ve successfully delivered
-            projects across diverse industries including fintech, e-commerce, and enterprise SaaS.
-            My expertise spans the entire development lifecycle—from initial concept and architecture
-            to deployment and maintenance.
+            With several years of experience in full-stack development, I&apos;ve successfully
+            delivered projects across diverse industries including fintech, e-commerce, and
+            enterprise SaaS. My expertise spans the entire development lifecycle—from initial
+            concept and architecture to deployment and maintenance.
           </p>
           <p>
             Key achievements include architecting scalable microservices that handle millions of
-            requests, leading development teams through complex projects, and consistently delivering
-            solutions that exceed client expectations. I&apos;ve worked with both startups and established
-            companies, adapting quickly to different tech stacks and business requirements.
+            requests, leading development teams through complex projects, and consistently
+            delivering solutions that exceed client expectations. I&apos;ve worked with both
+            startups and established companies, adapting quickly to different tech stacks and
+            business requirements.
           </p>
           <p>
             I specialize in modern web technologies with a focus on TypeScript, React, Next.js,
@@ -219,9 +223,7 @@ export default function AboutPage() {
             measurable value.
           </p>
           <div className="mt-8">
-            <p className="text-foreground font-medium mb-4">
-              Interested in my full experience?
-            </p>
+            <p className="text-foreground font-medium mb-4">Interested in my full experience?</p>
             <Button asChild size="lg" variant="outline">
               <a
                 href="/resume/Josiah_Praise_Resume.pdf"

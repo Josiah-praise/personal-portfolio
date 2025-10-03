@@ -16,8 +16,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.slug}`} className="group block h-full">
       <div className="relative h-full">
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-purple-600 to-pink-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
-        <Card className="relative h-full hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden border-2 hover:border-primary/50">
+        <div className="absolute inset-0 rounded-lg border border-primary/20 bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+        <Card className="relative h-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer overflow-hidden border hover:border-primary/30">
           <CardHeader className="p-0">
             <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-secondary/50 to-secondary">
               {/* Overlay gradient */}

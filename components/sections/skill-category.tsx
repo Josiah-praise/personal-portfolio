@@ -11,14 +11,17 @@ export function SkillCategory({ category }: SkillCategoryProps) {
         {category.name}
       </h3>
       <div className="flex flex-wrap gap-2">
-        {category.skills.map((skill) => (
-          <span
-            key={skill}
-            className="bg-secondary text-secondary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/80 transition-colors"
-          >
-            {skill}
-          </span>
-        ))}
+        {category.skills.map((skill) => {
+          const skillName = typeof skill === 'string' ? skill : skill.name;
+          return (
+            <span
+              key={skillName}
+              className="bg-secondary text-secondary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/80 transition-colors"
+            >
+              {skillName}
+            </span>
+          );
+        })}
       </div>
     </div>
   );

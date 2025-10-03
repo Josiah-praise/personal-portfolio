@@ -54,17 +54,15 @@ function StatItem({ icon: Icon, value, label, suffix = '' }: StatItemProps) {
   }, [isVisible, value]);
 
   return (
-    <div
-      ref={ref}
-      className="relative group"
-    >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></div>
-      <div className="relative bg-card border border-border rounded-lg p-6 text-center">
+    <div ref={ref} className="relative group">
+      <div className="absolute inset-0 rounded-lg border border-primary/15 bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+      <div className="relative bg-card border border-border rounded-lg p-6 text-center transition-all duration-300 group-hover:shadow-md">
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-4">
           <Icon className="w-6 h-6" />
         </div>
         <div className="text-4xl font-bold text-foreground mb-2">
-          {count}{suffix}
+          {count}
+          {suffix}
         </div>
         <div className="text-sm text-muted-foreground">{label}</div>
       </div>
