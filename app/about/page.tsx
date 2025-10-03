@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
+import { skills } from '@/lib/data/skills';
+import { SkillCategory } from '@/components/sections/skill-category';
 
 export const metadata = {
   title: 'About | Josiah Praise',
@@ -188,6 +190,18 @@ export default function AboutPage() {
               </a>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Skills & Technologies Section */}
+      <section className="mb-16">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
+          Skills & Technologies
+        </h2>
+        <div className="space-y-6">
+          {skills.map((category) => (
+            <SkillCategory key={category.name} category={category} />
+          ))}
         </div>
       </section>
     </article>
