@@ -1,0 +1,82 @@
+---
+# Basic Information
+title: "sBTC Express Frontend"
+slug: "sbtc-express-frontend"
+description: "Merchant dashboard that turns the sBTC Express API into real-time payment tracking, analytics, and withdrawals."
+
+# Display Settings
+featured: true
+order: 3
+category: "Frontend"
+
+# Technologies
+technologies:
+  - "Next.js 15"
+  - "React 19"
+  - "TypeScript"
+  - "Tailwind CSS"
+  - "Zustand"
+  - "TanStack Query"
+  - "Radix UI"
+  - "WebSockets"
+
+# Timeline
+startDate: "2024-05"
+endDate: "2024-09"
+
+# Links (optional)
+githubUrl: "https://github.com/Josiah-praise/sbtc-express-frontend"
+
+# Images
+thumbnail: "/images/projects/sbtc-express-frontend/thumbnail.webp"
+images:
+  - "/images/projects/sbtc-express-frontend/screenshot-1.webp"
+  - "/images/projects/sbtc-express-frontend/screenshot-2.webp"
+  - "/images/projects/sbtc-express-frontend/screenshot-3.webp"
+  - "/images/projects/sbtc-express-frontend/screenshot-4.webp"
+---
+
+## Problem
+
+Merchants adopting sBTC struggled to monitor on-chain deposits, reconcile balances, and act on webhook events without running their own tooling. Console logs and manual spreadsheets hid stale payments, authentication lapses stalled staff workflows, and the lack of live feedback left checkout teams guessing whether invoices were actually paid. The business needed a merchant-friendly surface that exposed the API’s power while keeping support tickets low and onboarding fast.
+
+## Solution
+
+The frontend wraps the sBTC Express REST API in a Next.js 15 dashboard that hydrates instantly, keeps auth state synced, and pushes live payment data over WebSockets. A protected app shell checks Zustand state before rendering to prevent flicker, while TanStack Query drives paginated tables, analytics cards, and retryable mutations. The WebSocket provider replays room subscriptions after reconnects so payment and withdrawal updates arrive without polling. Shadcn/Radix primitives supply accessible dialogs, drawers, and skeletons that let merchants act (create links, request withdrawals, configure webhooks) inside a consistent UI that mirrors Stripe’s ergonomics.
+
+## Key Features
+
+- **Real-Time Payment Command Center**: Overview cards, recent payments, and live status badges stay in sync via WebSocket events and optimistic state updates.
+- **Payment Link Builder**: A modal wizard validates input with zod + react-hook-form, sets expirations, and instantly publishes reusable checkout links.
+- **Webhook & API Key Management**: Tables and drawers surface delivery history, retry tooling, and secure credential lifecycle controls.
+- **Withdrawal Orchestration**: Merchants can request sweeps, monitor confirmation progress, and review enhanced stats without leaving the dashboard.
+
+## Technologies Used
+
+**Frontend:**
+- Next.js 15 & React 19: App Router streaming with client components where real-time interactivity is required.
+- Tailwind CSS + shadcn/Radix UI: Rapid UI assembly with accessible primitives and consistent design tokens.
+
+**Backend:**
+- sBTC Express REST API: Central payment, webhook, and withdrawal orchestration consumed through the typed API client.
+- WebSocket gateway: Pushes payment/withdrawal updates that hydrate Zustand stores and drive live UI changes.
+
+**Infrastructure/DevOps:**
+- Sonner Toaster & structured logging: Unified feedback layer for mutations and API errors across environments.
+
+## Results
+
+**Outcomes:**
+- Validated sub-2s payment status propagation in staging thanks to WebSocket-driven `useMultiplePaymentUpdates`.
+- Cut manual payment link creation time to under 30 seconds with the guided dialog and defaulted metadata.
+- Eliminated auth-related page reloads during QA by syncing JWT refreshes between the API client and WebSocket provider.
+
+**Key Learnings:**
+- Guarding against hydration mismatch (e.g., `isLoading` checks in `DashboardPage`) prevents redirect loops in protected routes.
+- Centralizing API token management lets WebSocket re-authentication stay transparent to merchants.
+- Skeleton-loading key metrics preserves perceived performance even when backend analytics calls degrade.
+
+**Impact:**
+- Users gain confidence that invoices, withdrawals, and webhooks are current without command-line tooling.
+- The business presents a Stripe-like “single pane of glass,” shortening merchant onboarding and reducing support load.
+- Technical debt stays low through typed API boundaries, modular stores, and shared UI primitives that scale with new product areas.

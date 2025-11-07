@@ -1,0 +1,68 @@
+---
+title: "sBTC Express"
+slug: "sbtc-express"
+description: "Stripe-inspired payment gateway that wraps sBTC deposits in a developer-first REST API."
+featured: true
+order: 4
+category: "Backend"
+technologies:
+  - "Express.js"
+  - "TypeScript"
+  - "SQLite"
+  - "Stacks API"
+  - "WebSockets"
+startDate: "2024-02"
+endDate: "2024-06"
+githubUrl: "https://github.com/your-org/sbtc-express"
+thumbnail: "/images/projects/sbtc-express/thumbnail.webp"
+images:
+  - "/images/projects/sbtc-express/screenshot-1.webp"
+  - "/images/projects/sbtc-express/screenshot-2.webp"
+  - "/images/projects/sbtc-express/screenshot-3.webp"
+  - "/images/projects/sbtc-express/screenshot-4.webp"
+---
+
+## Problem
+
+Stacks builders wanted to accept sBTC without running their own node or wrestling with on-chain reconciliation. The team needed unique deposit addresses per invoice, deterministic balance tracking, and reliable webhooks so downstream systems could treat sBTC settlements like any familiar fiat payout. Rate limits on Hiro’s API, sBTC contract quirks, and rapid payment expiry requirements made the integration brittle for merchants working under tight SLAs.
+
+## Solution
+
+The service wraps the entire Stacks payment lifecycle behind an Express.js API written in TypeScript. HD wallet derivation creates a fresh sBTC address for every payment request, while a background monitor polls the blockchain, reconciles deposits, and emits WebSocket updates for hosted checkout pages. Confirmations credit merchant balances, trigger signed webhooks with retry logic, and feed a withdrawal engine that sweeps funds through smart-contract calls. SQLite keeps the data model lightweight but auditable, and all ingress sits behind Helmet, CORS, and rate limiting so merchants can drop the gateway into production with minimal infrastructure.
+
+## Key Features
+
+- **Deterministic Payment Addresses**: BIP44 HD wallet derivation issues a unique Stacks address per invoice, eliminating address reuse and simplifying reconciliation.
+- **Real-Time Blockchain Reconciliation**: A 15-second monitoring cadence hydrates payment states, handles expirations, and broadcasts status changes over WebSockets and webhooks.
+- **Resilient Webhook Delivery**: Signed payloads, delivery logs, and five exponential retries guarantee downstream systems stay in sync even during partner outages.
+- **Treasury & Withdrawals Automation**: Merchant balances update atomically, while withdrawals debit, broadcast, and refund on failure to prevent treasury drift.
+
+## Technologies Used
+
+**Frontend:**
+- Hosted Express views + vanilla JS: Lightweight checkout pages with QR codes and polling for payment state.
+
+**Backend:**
+- Express.js & TypeScript: Modular controllers, services, and middleware for Stripe-like ergonomics.
+- SQLite: File-backed persistence with balance history and idempotency guards.
+
+**Infrastructure/DevOps:**
+- Hiro Stacks API & @stacks/transactions: Blockchain reads/writes for sBTC.
+- WebSockets (ws): Push channel for live payment and withdrawal updates.
+
+## Results
+
+**Outcomes:**
+- Kept payment detection latency under ~15 s through immediate boot scans and scheduled monitoring.
+- Sustained webhook delivery during partner outages with five exponential retries and 30 s request timeouts.
+- Achieved zero address collisions by deriving payment accounts deterministically from the master seed.
+
+**Key Learnings:**
+- Rate limits on blockchain APIs demand caching, backoff, and trimmed result sets to stay reliable.
+- Aligning payment expiry windows with merchant UX is as important as on-chain correctness.
+- Secret management for wallet seeds and webhook signatures must be hardened before production rollout.
+
+**Impact:**
+- Merchants can accept sBTC with Stripe-like ergonomics, no node ops required.
+- Businesses gain predictable settlement data, enabling automated invoicing and reconciliation.
+- Technical stack remains maintainable and extensible for future on-chain features like refunds or subscriptions.

@@ -27,8 +27,8 @@ export default function AboutPage() {
             </p>
             <Button asChild size="lg">
               <a
-                href="/resume/Praise_Josiah_Resume.pdf"
-                download="Praise_Josiah_Resume.pdf"
+                href="/resume/Josiah_Praise_Resume.pdf"
+                download="Josiah_Praise_Resume.pdf"
                 aria-label="Download resume as PDF"
                 className="inline-flex"
               >
@@ -37,8 +37,8 @@ export default function AboutPage() {
               </a>
             </Button>
           </div>
-          <div className="flex justify-center">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden bg-muted">
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden bg-muted md:ml-auto">
               <Image
                 src="/images/profile.jpg"
                 alt="Josiah Praise - Full Stack Developer"
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">My Journey</h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            In 2022, I made a pivotal decision to leave university and fully commit to software
+            In 2022, I made a pivotal decision to commit to software
             development as my career. Through an intensive bootcamp, coupled with relentless hard
             work and self-driven learning, I built the foundation for the experience I have today.
           </p>
@@ -159,10 +159,10 @@ export default function AboutPage() {
                       Database Architecture & Optimization
                     </span>
                   </li>
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">Security Analysis & Code Review</span>
-                  </li>
+                  </li> */}
                 </ul>
               </CardContent>
             </Card>
@@ -192,10 +192,10 @@ export default function AboutPage() {
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">Rapid Learning & Adaptability</span>
                   </li>
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">Detail-Oriented Code Review</span>
-                  </li>
+                  </li> */}
                   <li className="flex items-start">
                     <span className="text-primary mr-2">▸</span>
                     <span className="text-muted-foreground">Clear Technical Communication</span>
@@ -214,7 +214,7 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
           <p>
-            With 3+ years of experience, I&apos;ve worked across diverse industries including
+            With 2+ years of experience, I&apos;ve worked across diverse industries including
             fintech, AI, and whistleblowing platforms, delivering full-stack and blockchain
             solutions. My expertise spans the entire development lifecycle, from initial concept and
             architecture to deployment and maintenance.
@@ -234,16 +234,16 @@ export default function AboutPage() {
             not only works well but also delivers measurable value and security.
           </p>
           <div className="mt-8">
-            <p className="text-foreground font-medium mb-4">Interested in my full experience?</p>
+            <p className="text-foreground font-medium mb-4">Interested in my experience?</p>
             <Button asChild size="lg" variant="outline">
               <a
-                href="/resume/Praise_Josiah_Resume.pdf"
-                download="Praise_Josiah_Resume.pdf"
+                href="/resume/Josiah_Praise_Resume.pdf"
+                download="Josiah_Praise_Resume.pdf"
                 aria-label="Download resume as PDF"
                 className="inline-flex"
               >
                 <Download className="mr-2 h-5 w-5" />
-                Download Full Resume
+                Download Resume
               </a>
             </Button>
           </div>

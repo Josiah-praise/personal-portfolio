@@ -1,0 +1,84 @@
+---
+title: "PONG-IT: Universal Multiplayer Gaming on Push Chain"
+slug: "pong-it"
+description: "Cross-chain real-time Pong built on Push Chain with NFT power-ups, trustless staking, and a universal leaderboard."
+featured: true
+order: 1
+category: "Full-Stack"
+technologies:
+  - "Push Chain"
+  - "Solidity"
+  - "React"
+  - "TypeScript"
+  - "Node.js"
+  - "Socket.IO"
+  - "MongoDB"
+  - "Viem"
+  - "ethers.js"
+  - "Docker"
+startDate: "2024-05"
+endDate: "2024-07"
+demoUrl: "https://pong-it-pc.vercel.app/"
+githubUrl: "https://github.com/Josiah-praise/pong-it-pc"
+thumbnail: "/images/projects/pong-it/thumbnail.webp"
+images:
+  - "/images/projects/pong-it/screenshot-1.webp"
+  - "/images/projects/pong-it/screenshot-2.webp"
+  - "/images/projects/pong-it/screenshot-3.webp"
+---
+
+## Problem
+
+Blockchain gaming is fragmented by chain-specific deployments. Players typically need wallets that match the target chain, must bridge assets, and pay native gas fees before they can even press "Play." That friction throttles adoption, makes cross-chain matchmaking impossible, and slows community growth for competitive games.
+
+PONG-IT set out to prove that a single deployment could welcome players from Ethereum, Solana, Base, and beyond without wallet switching, token swapping, or duplicated infrastructure.
+
+## Solution
+
+We built PONG-IT as a Push Chain Universal App so one smart-contract deployment can serve every connected blockchain. Universal Executor Accounts (UEA) abstract wallet differences and gas requirements so any player can authenticate and join a match instantly. A Node.js backend runs a 60 FPS authoritative game engine, orchestrates matchmaking, emits WebSocket updates, signs winners, and interacts with Push Chain contracts.
+
+Two core Solidity contracts power the on-chain experience. `PongPowerUps` (ERC-1155) mints and manages consumable power-ups with daily loot crates, delegation, and usage tracking, while `PongEscrow` escrows stake amounts, validates winners with ECDSA signatures, and handles refunds safely. The result is a seamless competitive loop: queue for a match, stake PC/ETH if you want a higher tier, earn provably fair power-ups, and climb a global ELO leaderboard (from whichever chain you call home).
+
+## Key Features
+
+- **Universal Matchmaking:** Push Chain UEAs let players connect from any EVM or Solana-compatible wallet and land in the same matchmaking pool with zero chain switching.
+- **Trustless Staked Matches:** `PongEscrow` escrows entry stakes, doubles the prize for the verified winner, and offers multiple refund paths to keep funds safe.
+- **Consumable NFT Power-Ups:** `PongPowerUps` issues ERC-1155 boosts through provably fair daily crates, supports in-game consumption, and enables time-boxed delegation.
+- **Real-Time Multiplayer Engine:** Socket.IO-powered backend enforces physics, anti-cheat logic, and broadcasts 60 FPS state updates to players and spectators.
+- **Competitive Ecosystem:** ELO ranking, global leaderboards, rich player stats, and match history give competitive gamers a meaningful progression loop.
+- **Spectator & Social Play:** Random matchmaking, private room codes, and live spectating make it easy for communities to host events or watch friends.
+
+## Technologies Used
+
+**Frontend:**
+- **React 18 + TypeScript:** Builds the universal web client with HTML5 Canvas rendering and responsive controls.
+- **Push Chain SDK & Viem:** Handles Universal Executor Accounts and typed contract interactions from any supported wallet.
+- **Socket.IO Client:** Streams real-time match data, leaderboard updates, and spectator feeds.
+
+**Backend:**
+- **Node.js 18 & Express:** REST and WebSocket APIs for matchmaking, leaderboards, and player services.
+- **Socket.IO 4:** Server-authoritative multiplayer engine with room-based broadcasting.
+- **MongoDB:** Persists player profiles, power-up crates, match history, and ranking data.
+- **ethers.js:** Mints power-ups, validates signatures, and settles escrow outcomes against Push Chain.
+
+**Infrastructure & Smart Contracts:**
+- **Push Chain (Donut Testnet):** Single deployment serving cross-chain users via Universal Apps.
+- **Solidity + Hardhat:** Contracts implementing ERC-1155 power-ups, escrow logic, role-based access control, and reentrancy protection.
+- **Docker, Netlify, Render:** Containerized services, hosted frontend, and managed backend for quick iteration and demo reliability.
+
+## Results
+
+**Outcomes:**
+- Demonstrated the first universal, cross-chain multiplayer Pong experience for the Push Chain Project G.U.D hackathon.
+- Shipped real-time gameplay with &lt;100 ms latency budget, supporting concurrent matches and live spectators.
+- Delivered turnkey staking tiers (0.001–0.05 PC) with automatic prize doubling and verifiable winner claims.
+
+**Key Learnings:**
+- Universal Executor Accounts meaningfully reduce onboarding friction compared to multi-chain wallet flows.
+- Combining provably fair loot crates with delegation mechanics showcases ERC-1155 flexibility for gaming.
+- Server-authoritative physics paired with cryptographic signatures is critical for keeping competitive Web3 games honest.
+
+**Impact:**
+- Validated Push Chain’s “deploy once, reach everyone” vision with a complete game loop, from matchmaking to rewards.
+- Equipped the Push Chain ecosystem with production-ready smart contracts and backend patterns other Universal Apps can reuse.
+- Positioned PONG-IT for future tournament play, seasonal ladders, and expanded NFT economies as Push Chain adoption grows.

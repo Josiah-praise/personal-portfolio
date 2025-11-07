@@ -1,0 +1,79 @@
+---
+title: "TicketChain Universal Event Ticketing"
+slug: "ticketchain"
+description: "Cross-chain NFT ticketing platform pairing Push Chain universal accounts with a full marketplace and venue tooling."
+featured: true
+order: 2
+category: "Full-Stack"
+technologies:
+  - "React"
+  - "TypeScript"
+  - "Solidity"
+  - "Push Chain UI Kit"
+  - "Tailwind CSS"
+  - "Hardhat"
+  - "Viem"
+  - "wagmi"
+  - "Pinata"
+startDate: "2025-02"
+endDate: "Present"
+demoUrl: "https://universal-event-ticketing.vercel.app/"
+githubUrl: "https://github.com/zachyo/universal-event-ticketing"
+thumbnail: "/images/projects/ticketchain/thumbnail.webp"
+images:
+  - "/images/projects/ticketchain/screenshot-1.webp"
+  - "/images/projects/ticketchain/screenshot-2.webp"
+  - "/images/projects/ticketchain/screenshot-3.webp"
+---
+
+## Problem
+
+Web3 ticketing is splintered across chains, forcing fans to bridge assets, swap wallets, and trust ad-hoc spreadsheets just to enter a venue. Organizers deploy and maintain separate contracts per network, fight counterfeit tickets in secondary markets, and juggle QR validation tooling that rarely talks to on-chain state. The result is abandoned checkouts, operational overhead, and brittle experiences for large community events.
+
+## Solution
+
+TicketChain delivers a single Push Chain Universal App that serves buyers and organizers from any supported wallet. Universal Executor Accounts (UEA) handle cross-chain identity so a MetaMask or Phantom session works out of the box, while contracts on Push Chain manage ticket minting, resale custody, royalty enforcement, and on-site validation. The React + Vite frontend leans on Push Chain’s UI Kit, wagmi, and viem for typed contract interactions, and automates metadata publishing to IPFS so every ticket is portable and verifiable.
+
+Organizer dashboards provide event creation, pricing, batch listings, and QR tooling with live contract reads, while attendees enjoy a frictionless checkout that never requires bridging or native PC tokens. The whole stack proved that universal deployment can cover the entire ticket lifecycle, from drop to door scan, without duplicating infrastructure per chain.
+
+## Key Features
+
+- **Universal Checkout:** Buyers connect any wallet and purchase instantly; settlement happens on Push Chain with no manual bridging.
+- **Marketplace Offers & Batching:** Sellers list or delist multiple tickets in one transaction and negotiate on-chain offers with escrowed custody.
+- **Automated Metadata Pipeline:** Post-purchase hooks upload rich JSON to Pinata and sync `tokenURI`, ensuring NFTs remain portable across marketplaces.
+- **Venue Verification Suite:** Staff regenerate QR codes, scan entries, and validate status directly against contracts to catch fraud in real time.
+- **Organizer Command Center:** Event creation wizard, issuance metrics, and royalty tracking live in one dashboard tailored for non-technical teams.
+
+## Technologies Used
+
+**Frontend:**
+- **React 19 + TypeScript:** Fast iteration for dashboard-heavy UX with type safety across components and hooks.
+- **Push Chain UI Kit, wagmi, viem:** Drop-in wallet flows for UEAs plus typed reads/writes to Push Chain contracts.
+- **Tailwind CSS:** Utility-first styling for responsive layouts shared by buyers, sellers, and venue staff.
+
+**Smart Contracts & Tooling:**
+- **Solidity (TicketFactory, TicketNFT, TicketMarketplace):** Encodes event lifecycles, escrowed resale, and royalty splits on Push Chain.
+- **Hardhat + TypeChain:** Automated deployments, type-safe ABIs, and scripted verification for Donut testnet.
+- **ERC-1155 + AccessControl:** Provides multi-tier ticket classes, controlled minting, and secure role delegation.
+
+**Infrastructure:**
+- **Pinata IPFS:** Guarantees decentralized storage for ticket metadata and imagery with retry queues for reliability.
+- **Vercel + custom RPC routing:** Hosts the frontend globally while proxying blockchain reads through hardened endpoints.
+- **Background worker queue:** Retries metadata pinning and gracefully surfaces failures to organizers for manual overrides.
+
+## Results
+
+**Outcomes:**
+- Batch listing collapsed five-ticket drops from five transactions to one, cutting wallet prompts by 80% and saving ~0.012 PC in gas.
+- Universal checkout succeeded across Ethereum Sepolia and Solana devnet wallets, achieving a 100% pass rate in cross-chain smoke tests.
+- Debounced search and TanStack Query caching keep discovery responses under 100 ms even with 150 seeded events.
+
+**Key Learnings:**
+- Parsing `TicketMinted` events immediately after settlement is vital because without it metadata cannot resolve token IDs deterministically.
+- Universal flows need explicit UX states around bridging/confirmation even when UEAs hide gas; optimistic updates alone risk duplicate orders.
+- IPFS reliability hinges on retry queues and manual override tooling so organizers can keep doors open during regional outages.
+
+**Impact:**
+- Fans complete purchases with their existing wallets, eliminating the drop-off caused by mandatory bridging or new token requirements.
+- Organizers manage creation, resale, and entry validation inside one dashboard, shrinking their tooling stack dramatically.
+- Engineering teams now ship against a single Push Chain code path, paving the way for production hardening and new ticketing verticals.

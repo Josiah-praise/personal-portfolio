@@ -27,11 +27,11 @@ export const skills: SkillCategory[] = [
   },
   {
     name: "Tools & Platforms",
-    skills: ["Git", "Docker", "Linux/Unix", "VS Code", "Figma", "Vercel", "AWS", "Firebase"],
+    skills: ["Git", "Docker", "Linux/Unix", "VS Code", "Vercel", "AWS", "Firebase", "Cloudflare"],
   },
   {
     name: "Practices & Methodologies",
-    skills: ["Agile/Scrum", "Test-Driven Development", "CI/CD", "Responsive Design", "Code Review", "API Design"],
+    skills: ["Agile/Scrum", "Test-Driven Development", "CI/CD", "Responsive Design", "API Design"],
   },
 ];
 
