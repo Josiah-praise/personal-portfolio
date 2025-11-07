@@ -77,10 +77,10 @@ export function StatsSection() {
         By The Numbers
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <StatItem icon={Code} value={3} label="Years Experience" suffix="+" />
-        <StatItem icon={Briefcase} value={15} label="Projects Completed" suffix="+" />
+        <StatItem icon={Code} value={2} label="Years Experience" suffix="+" />
+        <StatItem icon={Briefcase} value={5} label="Projects Completed" suffix="+" />
         <StatItem icon={Users} value={5} label="Happy Clients" suffix="+" />
-        <StatItem icon={Award} value={20} label="Technologies Mastered" suffix="+" />
+        <StatItem icon={Award} value={10} label="Technologies Mastered" suffix="+" />
       </div>
     </section>
   );
