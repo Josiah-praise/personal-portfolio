@@ -30,12 +30,13 @@ export function Nav() {
             key={link.href}
             href={link.href}
             className={cn(
-              'relative px-3 py-1.5 text-sm font-medium transition-colors',
-              active ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
+              'relative px-3 py-1.5 text-sm font-medium transition-all',
+              active
+                ? 'text-foreground bg-black/10 dark:bg-white/10 border border-black/20 dark:border-white/20'
+                : 'text-foreground/70 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5'
             )}
           >
             {link.label}
-            {active && <span className="absolute bottom-0 left-0 right-0 h-px bg-foreground" />}
           </Link>
         );
       })}

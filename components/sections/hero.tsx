@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Plus } from 'lucide-react';
 import { SiDiscord } from 'react-icons/si';
 import DotGrid from '@/components/effects/dotgrid-background';
 import { useTheme } from 'next-themes';
@@ -44,6 +44,12 @@ export function Hero() {
       </div>
       <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40 z-10">
         <div className="relative rounded-none border border-black/15 bg-white/20 p-8 shadow-lg backdrop-blur-sm dark:border-white/15 dark:bg-black/20">
+          {/* Corner plus signs */}
+          <Plus className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
+          <Plus className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
+          <Plus className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
+          <Plus className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left space-y-6 animate-fade-in">

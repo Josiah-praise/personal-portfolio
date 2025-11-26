@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { TechBadge } from './tech-badge';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Plus } from 'lucide-react';
 import { MagicCard } from '@/components/ui/magic-card';
 import { BorderBeam } from '@/components/ui/border-beam';
 import type { ProjectCard as ProjectCardType } from '@/lib/data/projects-data';
@@ -24,6 +24,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         gradientOpacity={0.3}
       >
         <div className="relative h-full bg-white/20 dark:bg-black/20 backdrop-blur-sm">
+          {/* Corner plus signs */}
+          <Plus className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
+          <Plus className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
+          <Plus className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
+          <Plus className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
+
           {/* Border beam on hover */}
           <BorderBeam
             size={200}

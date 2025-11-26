@@ -8,6 +8,7 @@ import { ProjectContent } from '@/components/project/project-content';
 import { ProjectLinks } from '@/components/project/project-links';
 import { BlurFade } from '@/components/ui/blur-fade';
 import { GlassCard } from '@/components/ui/glass-card';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 interface ProjectDetailPageProps {
   params: Promise<{
@@ -57,17 +58,19 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           </Link>
         </BlurFade>
 
-        <article className="max-w-4xl mx-auto">
-          <ProjectHeader project={project} />
+        <TracingBeam className="px-6">
+          <article className="max-w-4xl mx-auto">
+            <ProjectHeader project={project} />
 
-          {/* Content wrapped in glass card */}
-          <GlassCard className="p-8 mb-12">
-            <ProjectContent content={project.content} />
-          </GlassCard>
+            {/* Content wrapped in glass card */}
+            <GlassCard className="p-8 mb-12">
+              <ProjectContent content={project.content} />
+            </GlassCard>
 
-          <ProjectImages images={project.images} title={project.title} />
-          <ProjectLinks demoUrl={project.demoUrl} githubUrl={project.githubUrl} />
-        </article>
+            <ProjectImages images={project.images} title={project.title} />
+            <ProjectLinks demoUrl={project.demoUrl} githubUrl={project.githubUrl} />
+          </article>
+        </TracingBeam>
       </div>
     );
   } catch {
