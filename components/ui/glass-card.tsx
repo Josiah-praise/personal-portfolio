@@ -18,10 +18,22 @@ export function GlassCard({ children, className, showCorners = true }: GlassCard
       {showCorners && (
         <>
           {/* Corner plus signs */}
-          <Plus className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
-          <Plus className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
-          <Plus className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
-          <Plus className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70" strokeWidth={1.5} />
+          <Plus
+            className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70"
+            strokeWidth={1.5}
+          />
         </>
       )}
       {children}

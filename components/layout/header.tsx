@@ -21,7 +21,7 @@ export function Header() {
           {/* Bottom-right */}
           <span className="absolute bottom-0 -right-2 h-2 w-px bg-black/70 dark:bg-white/70" />
           <span className="absolute -bottom-2 right-0 h-px w-2 bg-black/70 dark:bg-white/70" />
-          
+
           <Link href="/" className="flex items-center">
             <span className="text-lg font-bold tracking-tight text-black dark:text-white">PJ</span>
           </Link>

@@ -17,9 +17,7 @@ export function ProjectLinks({ demoUrl, githubUrl }: ProjectLinksProps) {
   return (
     <section className="mt-12 pt-12 border-t border-black/10 dark:border-white/10">
       <BlurFade delay={0.5}>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
-          Project Links
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">Project Links</h2>
       </BlurFade>
 
       <BlurFade delay={0.55}>

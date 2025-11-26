@@ -25,10 +25,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
       >
         <div className="relative h-full bg-white/20 dark:bg-black/20 backdrop-blur-sm">
           {/* Corner plus signs */}
-          <Plus className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
-          <Plus className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
-          <Plus className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
-          <Plus className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20" strokeWidth={1.5} />
+          <Plus
+            className="absolute -top-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -top-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -bottom-3 -left-3 h-6 w-6 text-black/70 dark:text-white/70 z-20"
+            strokeWidth={1.5}
+          />
+          <Plus
+            className="absolute -bottom-3 -right-3 h-6 w-6 text-black/70 dark:text-white/70 z-20"
+            strokeWidth={1.5}
+          />
 
           {/* Border beam on hover */}
           <BorderBeam
@@ -59,9 +71,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 <span>{project.title}</span>
                 <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
               </h3>
-              <p className="text-muted-foreground line-clamp-2 text-sm">
-                {project.description}
-              </p>
+              <p className="text-muted-foreground line-clamp-2 text-sm">{project.description}</p>
             </div>
 
             {/* Tech badges */}

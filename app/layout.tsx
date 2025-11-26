@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { OpenToWorkBadge } from '@/components/effects/open-to-work-badge';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -47,6 +48,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 relative">{children}</main>
           <Footer />
+          <OpenToWorkBadge />
         </ThemeProvider>
       </body>
     </html>

@@ -5,7 +5,8 @@ import { TextAnimate } from '@/components/ui/text-animate';
 
 export const metadata = {
   title: 'Projects | Praise Josiah',
-  description: 'Explore my portfolio of web development and blockchain projects, including full-stack applications, decentralized solutions, and scalable systems.',
+  description:
+    'Explore my portfolio of web development and blockchain projects, including full-stack applications, decentralized solutions, and scalable systems.',
 };
 
 export default async function ProjectsPage() {
@@ -27,8 +28,8 @@ export default async function ProjectsPage() {
 
         <BlurFade delay={0.2}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-            A collection of projects showcasing my expertise in full-stack development,
-            blockchain solutions, and scalable system architecture.
+            A collection of projects showcasing my expertise in full-stack development, blockchain
+            solutions, and scalable system architecture.
           </p>
         </BlurFade>
 
@@ -41,7 +42,7 @@ export default async function ProjectsPage() {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-3xl font-bold text-foreground">
-                {new Set(projects.flatMap(p => p.technologies)).size}+
+                {new Set(projects.flatMap((p) => p.technologies)).size}+
               </span>
               <span className="text-muted-foreground">Technologies</span>
             </div>

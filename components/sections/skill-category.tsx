@@ -7,9 +7,7 @@ interface SkillCategoryProps {
 export function SkillCategory({ category }: SkillCategoryProps) {
   return (
     <div className="mb-8">
-      <h3 className="text-xl font-semibold mb-4 text-foreground">
-        {category.name}
-      </h3>
+      <h3 className="text-xl font-semibold mb-4 text-foreground">{category.name}</h3>
       <div className="flex flex-wrap gap-2">
         {category.skills.map((skill) => {
           const skillName = typeof skill === 'string' ? skill : skill.name;

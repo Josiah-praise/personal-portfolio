@@ -23,13 +23,15 @@ export function ProjectImages({ images, title }: ProjectImagesProps) {
       } else if (event.key === 'ArrowRight') {
         setActiveIndex((prev) => (prev !== null ? (prev + 1) % images.length : null));
       } else if (event.key === 'ArrowLeft') {
-        setActiveIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null));
+        setActiveIndex((prev) =>
+          prev !== null ? (prev - 1 + images.length) % images.length : null
+        );
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
-    
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
@@ -43,9 +45,7 @@ export function ProjectImages({ images, title }: ProjectImagesProps) {
   return (
     <section className="mb-12">
       <BlurFade delay={0.35}>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">
-          Screenshots
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-foreground">Screenshots</h2>
       </BlurFade>
 
       {/* Primary image in Safari mock */}
@@ -102,10 +102,7 @@ export function ProjectImages({ images, title }: ProjectImagesProps) {
           aria-label="Project screenshot viewer"
           onClick={() => setActiveIndex(null)}
         >
-          <div
-            className="relative w-full max-w-6xl"
-            onClick={(event) => event.stopPropagation()}
-          >
+          <div className="relative w-full max-w-6xl" onClick={(event) => event.stopPropagation()}>
             {/* Close button */}
             <button
               type="button"
