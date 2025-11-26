@@ -11,8 +11,8 @@ export function Hero() {
       aria-label="Hero"
       className="relative flex items-center justify-center overflow-hidden min-h-screen"
     >
-      {/* Aurora Background */}
-      <div className="absolute inset-0 -z-10">
+      {/* Aurora Background - extends to top of viewport */}
+      <div className="fixed inset-0 -z-10">
         <Aurora
           colorStops={["#000000", "#ffffff", "#000000"]}
           amplitude={1.5}
