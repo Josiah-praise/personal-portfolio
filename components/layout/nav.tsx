@@ -31,15 +31,11 @@ export function Nav() {
             href={link.href}
             className={cn(
               'relative px-3 py-1.5 text-sm font-medium transition-colors',
-              active
-                ? 'text-background'
-                : 'text-background/70 hover:text-background'
+              active ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
             )}
           >
             {link.label}
-            {active && (
-              <span className="absolute bottom-0 left-0 right-0 h-px bg-background" />
-            )}
+            {active && <span className="absolute bottom-0 left-0 right-0 h-px bg-foreground" />}
           </Link>
         );
       })}

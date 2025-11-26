@@ -36,8 +36,8 @@ export function MobileMenu() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden hover:bg-background/10">
-          <Menu className="h-5 w-5 text-background" />
+        <Button variant="ghost" size="icon" className="md:hidden hover:bg-foreground/10">
+          <Menu className="h-5 w-5 text-foreground" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </DrawerTrigger>

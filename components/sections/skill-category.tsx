@@ -16,7 +16,7 @@ export function SkillCategory({ category }: SkillCategoryProps) {
           return (
             <span
               key={skillName}
-              className="bg-secondary text-secondary-foreground px-4 py-2 rounded-md text-sm font-medium hover:bg-secondary/80 transition-colors"
+              className="relative border border-black/15 bg-white/30 dark:border-white/15 dark:bg-black/30 text-foreground px-4 py-2 text-sm font-medium hover:bg-white/50 dark:hover:bg-black/50 transition-colors backdrop-blur-sm"
             >
               {skillName}
             </span>

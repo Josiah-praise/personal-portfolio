@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { TechBadge } from './tech-badge';
 import { ArrowRight } from 'lucide-react';
+import { MagicCard } from '@/components/ui/magic-card';
+import { BorderBeam } from '@/components/ui/border-beam';
 import type { ProjectCard as ProjectCardType } from '@/lib/data/projects-data';
 
 interface ProjectCardProps {
@@ -15,45 +16,62 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <Link href={`/projects/${project.slug}`} className="group block h-full">
-      <div className="relative h-full">
-        <div className="absolute inset-0 rounded-lg border border-primary/20 bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-        <Card className="relative h-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer overflow-hidden border hover:border-primary/30">
-          <CardHeader className="p-0">
-            <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-secondary/50 to-secondary">
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-              <Image
-                src={project.thumbnail}
-                alt={`${project.title} project thumbnail`}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-          </CardHeader>
-          <CardContent className="p-6 space-y-4">
+      <MagicCard
+        className="h-full overflow-hidden border border-black/10 dark:border-white/10"
+        gradientColor="rgba(255,255,255,0.05)"
+        gradientFrom="rgba(255,255,255,0.1)"
+        gradientTo="rgba(255,255,255,0.05)"
+        gradientOpacity={0.3}
+      >
+        <div className="relative h-full bg-white/20 dark:bg-black/20 backdrop-blur-sm">
+          {/* Border beam on hover */}
+          <BorderBeam
+            size={200}
+            duration={8}
+            delay={0}
+            colorFrom="rgba(0,0,0,0.3)"
+            colorTo="rgba(255,255,255,0.3)"
+            className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+
+          {/* Thumbnail */}
+          <div className="relative aspect-video overflow-hidden bg-black/5 dark:bg-white/5">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+            <Image
+              src={project.thumbnail}
+              alt={`${project.title} project thumbnail`}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="p-6 space-y-4">
             <div>
-              <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors flex items-center justify-between">
+              <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-foreground/80 transition-colors flex items-center justify-between">
                 <span>{project.title}</span>
-                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-              </CardTitle>
-              <CardDescription className="mb-4 line-clamp-2 text-base">
+                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+              </h3>
+              <p className="text-muted-foreground line-clamp-2 text-sm">
                 {project.description}
-              </CardDescription>
+              </p>
             </div>
+
+            {/* Tech badges */}
             <div className="flex flex-wrap gap-2">
               {displayTechnologies.map((tech) => (
                 <TechBadge key={tech} technology={tech} />
               ))}
               {remainingCount > 0 && (
-                <span className="px-3 py-1 text-xs text-muted-foreground bg-secondary rounded-full">
-                  +{remainingCount} more
+                <span className="border border-black/10 dark:border-white/10 bg-white/20 dark:bg-black/20 text-muted-foreground px-3 py-1 text-xs">
+                  +{remainingCount}
                 </span>
               )}
             </div>
-          </CardContent>
-        </Card>
-      </div>
+          </div>
+        </div>
+      </MagicCard>
     </Link>
   );
 }
