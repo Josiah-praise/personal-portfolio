@@ -36,9 +36,9 @@ function StatItem({ icon: Icon, value, label, suffix = '', delay = 0 }: StatItem
   }, []);
 
   return (
-    <BlurFade delay={delay} inView>
-      <div ref={ref}>
-        <GlassCard className="text-center group hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300">
+    <BlurFade delay={delay} inView className="h-full">
+      <div ref={ref} className="h-full">
+        <GlassCard className="h-full flex flex-col items-center justify-center text-center group hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-none border border-black/20 bg-black/5 dark:border-white/20 dark:bg-white/5 mb-4 group-hover:scale-110 transition-transform duration-300">
             <Icon className="w-6 h-6 text-foreground" />
           </div>
@@ -67,7 +67,7 @@ export function StatsSection() {
           By The Numbers
         </h2>
       </BlurFade>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 auto-rows-fr">
         <StatItem icon={Code} value={2} label="Years Experience" suffix="+" delay={0.2} />
         <StatItem icon={Briefcase} value={5} label="Projects Completed" suffix="+" delay={0.3} />
         <StatItem icon={Users} value={5} label="Happy Clients" suffix="+" delay={0.4} />

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import CircularText from "@/components/ui/circular-text";
+import CircularText from '@/components/ui/circular-text';
 
 export function OpenToWorkBadge() {
   return (

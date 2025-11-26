@@ -42,13 +42,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Gradient Background */}
-          <div className="fixed inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5 animate-gradient -z-10" />
+          {/* <div className="fixed inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5 animate-gradient -z-10" /> */}
           <div className="fixed inset-0 bg-grid-pattern opacity-5 -z-10" />
 
           <Header />
           <main className="flex-1 relative">{children}</main>
           <Footer />
-          <OpenToWorkBadge />
+          {/* <OpenToWorkBadge /> */}
         </ThemeProvider>
       </body>
     </html>

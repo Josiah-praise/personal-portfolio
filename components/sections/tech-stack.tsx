@@ -1,88 +1,101 @@
 'use client';
 
-import { useRef } from 'react';
+import { Marquee } from '@/components/ui/marquee';
+import { cn } from '@/lib/utils';
+
+const techStack = [
+  // Row 1 - Frontend & Languages
+  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+  { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+  { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'Solidity', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg' },
+  { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' },
+];
+
+const techStackRow2 = [
+  // Row 2 - Backend & Tools
+  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'Express', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+  { name: 'NestJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg' },
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
+  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+];
+
+function TechCard({ name, icon }: { name: string; icon: string }) {
+  return (
+    <div
+      className={cn(
+        "relative flex items-center gap-3 px-4 py-3 rounded-xl",
+        "bg-white/10 dark:bg-white/5 backdrop-blur-md",
+        "border border-white/20 dark:border-white/10",
+        "shadow-lg hover:shadow-xl transition-all duration-300",
+        "hover:scale-105 hover:-translate-y-1",
+        "cursor-default select-none"
+      )}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={icon}
+        alt={name}
+        className="w-8 h-8 object-contain"
+        loading="lazy"
+      />
+      <span className="text-sm font-medium text-foreground whitespace-nowrap">
+        {name}
+      </span>
+    </div>
+  );
+}
 
 export function TechStack() {
-  const technologies = [
-    { name: 'React', category: 'Frontend' },
-    { name: 'Next.js', category: 'Frontend' },
-    { name: 'TypeScript', category: 'Language' },
-    { name: 'Node.js', category: 'Backend' },
-    { name: 'PostgreSQL', category: 'Database' },
-    { name: 'Tailwind CSS', category: 'Styling' },
-    { name: 'Prisma', category: 'Backend' },
-    { name: 'Git', category: 'Tools' },
-  ];
-
   return (
-    <section className="py-20 sm:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
+      
+      <div className="relative">
+        <div className="container mx-auto px-4 text-center mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Tech Stack
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Technologies I use to build modern, scalable applications
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          {technologies.map((tech, index) => (
-            <TechCard key={tech.name} tech={tech} index={index} />
-          ))}
+        {/* Gradient fade on edges */}
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-background to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-background to-transparent z-10" />
+
+          {/* First row - scrolls left */}
+          <Marquee 
+            pauseOnHover 
+            className="[--duration:35s] [--gap:1rem] mb-4"
+          >
+            {techStack.map((tech) => (
+              <TechCard key={tech.name} {...tech} />
+            ))}
+          </Marquee>
+
+          {/* Second row - scrolls right */}
+          <Marquee 
+            pauseOnHover 
+            reverse
+            className="[--duration:40s] [--gap:1rem]"
+          >
+            {techStackRow2.map((tech) => (
+              <TechCard key={tech.name} {...tech} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>
-  );
-}
-
-function TechCard({ tech, index }: { tech: { name: string; category: string }; index: number }) {
-  const overlayRef = useRef<HTMLDivElement>(null);
-
-  const animateIn = () => {
-    const el = overlayRef.current;
-    if (!el) return;
-
-    el.style.transition = 'none';
-    el.style.backgroundPosition = '-100% -100%, 0 0';
-    el.style.transition = '650ms ease';
-    el.style.backgroundPosition = '100% 100%, 0 0';
-  };
-
-  const animateOut = () => {
-    const el = overlayRef.current;
-    if (!el) return;
-
-    el.style.transition = '650ms ease';
-    el.style.backgroundPosition = '-100% -100%, 0 0';
-  };
-
-  return (
-    <div
-      className="group relative p-6 rounded-lg border-2 border-border hover:border-primary/50 bg-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg animate-fade-in overflow-hidden cursor-pointer"
-      style={{ animationDelay: `${index * 0.05}s`, animationFillMode: 'both' }}
-      onMouseEnter={animateIn}
-      onMouseLeave={animateOut}
-    >
-      <div className="text-center relative z-10">
-        <p className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">
-          {tech.name}
-        </p>
-        <p className="text-xs text-muted-foreground mt-1">
-          {tech.category}
-        </p>
-      </div>
-      {/* Glare hover effect */}
-      <div
-        ref={overlayRef}
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(-45deg, hsla(0,0%,0%,0) 60%, rgba(255, 255, 255, 0.3) 70%, hsla(0,0%,0%,0) 100%)',
-          backgroundSize: '250% 250%, 100% 100%',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: '-100% -100%, 0 0',
-        }}
-      />
-    </div>
   );
 }
