@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { SiDiscord } from 'react-icons/si';
-import { ParticlesBackground } from '@/components/effects/particles-background';
+import Aurora from '@/components/effects/aurora-background';
 
 export function Hero() {
   return (
@@ -11,7 +11,15 @@ export function Hero() {
       aria-label="Hero"
       className="relative flex items-center justify-center overflow-hidden min-h-screen"
     >
-      <ParticlesBackground />
+      {/* Aurora Background */}
+      <div className="absolute inset-0 -z-10">
+        <Aurora
+          colorStops={["#000000", "#ffffff", "#000000"]}
+          amplitude={1.5}
+          blend={0.8}
+          speed={0.4}
+        />
+      </div>
       <div className="container relative mx-auto px-4 py-20 sm:py-32 lg:py-40 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
